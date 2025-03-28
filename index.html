@@ -1,7 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="quiz-container">
+    <h1>🤖 Are You Smarter Than an AI?</h1>
+    <div id="quiz-box">
+      <p id="question"></p>
+      <ul id="answers"></ul>
+    </div>
+    <div id="result-box" class="hidden">
+      <h2>Your AI IQ: <span id="score"></span>/5</h2>
+      <p id="score-message"></p>
+
+      <form id="entry-form">
+        <label for="contact">Enter email or social handle to join the giveaway:</label>
+        <input type="text" id="contact" name="contact" required />
+        <button type="submit">Enter</button>
+      </form>
+
+      <div class="share">
+        <p>Share your score:</p>
+        <button id="twitter-share">Share on Twitter</button>
+        <button id="copy-link">Copy Game Link</button>
+        <p id="copy-msg" class="hidden">Link copied!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
 </body>
-</html> 
+</html>
