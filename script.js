@@ -1,3 +1,11 @@
+let timer; // countdown interval
+let timeLeft = 180; // 3 minutes in seconds
+
+const timerDisplay = document.createElement("div");
+timerDisplay.id = "timer";
+timerDisplay.textContent = `⏳ Time Left: ${formatTime(timeLeft)}`;
+document.querySelector(".quiz-container").insertBefore(timerDisplay, quizBox);
+
 let currentQuestion = 0;
 let score = 0;
 
@@ -12,6 +20,7 @@ function loadQuestion() {
   const q = questions[currentQuestion];
   questionEl.textContent = q.question;
   answersEl.innerHTML = "";
+  timerDisplay.textContent = `⏳ Time Left: ${formatTime(timeLeft)}`;
 
   q.answers.forEach((ans, idx) => {
     const li = document.createElement("li");
@@ -19,6 +28,17 @@ function loadQuestion() {
     li.addEventListener("click", () => selectAnswer(idx));
     answersEl.appendChild(li);
   });
+
+  if (!timer) {
+    timer = setInterval(() => {
+      timeLeft--;
+      timerDisplay.textContent = `⏳ Time Left: ${formatTime(timeLeft)}`;
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        showResult();
+      }
+    }, 1000);
+  }
 }
 
 function selectAnswer(index) {
@@ -34,18 +54,25 @@ function selectAnswer(index) {
 }
 
 function showResult() {
-  quizBox.classList.add("hidden");
-  resultBox.classList.remove("hidden");
-  scoreSpan.textContent = score;
+    clearInterval(timer);
+    quizBox.classList.add("hidden");
+    resultBox.classList.remove("hidden");
+    scoreSpan.textContent = score;
+  
+    const msg =
+      score === questions.length
+        ? "AI overlord level! 💡"
+        : score >= 10
+        ? "You know your stuff 🤓"
+        : "Maybe let the AI do the thinking for now 🤖";
+    scoreMsg.textContent = msg;
+  }
 
-  const msg =
-    score === 5
-      ? "AI overlord level! 💡"
-      : score >= 3
-      ? "You know your stuff 🤓"
-      : "Maybe let the AI do the thinking for now 🤖";
-  scoreMsg.textContent = msg;
-}
+function formatTime(seconds) {
+    const min = Math.floor(seconds / 60);
+    const sec = seconds % 60;
+    return `${min}:${sec < 10 ? '0' + sec : sec}`;
+  }
 
 document.getElementById("entry-form").addEventListener("submit", function (e) {
   e.preventDefault();
