@@ -82,7 +82,7 @@ document.getElementById("entry-form").addEventListener("submit", function (e) {
 });
 
 document.getElementById("twitter-share").addEventListener("click", function () {
-  const tweet = `I scored ${score}/5 on the AI Quiz! 🤖 Can you beat me? Try it here 👉`;
+  const tweet = `I scored ${score}/15 on the AI Quiz! 🤖 Can you beat me? Try it here 👉`;
   const url = encodeURIComponent(window.location.href);
   window.open(
     `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}&url=${url}`,
