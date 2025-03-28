@@ -4,7 +4,6 @@ let timeLeft = 180; // 3 minutes in seconds
 const timerDisplay = document.createElement("div");
 timerDisplay.id = "timer";
 timerDisplay.textContent = `⏳ Time Left: ${formatTime(timeLeft)}`;
-document.querySelector(".quiz-container").insertBefore(timerDisplay, quizBox);
 
 let currentQuestion = 0;
 let score = 0;
@@ -15,6 +14,7 @@ const quizBox = document.getElementById("quiz-box");
 const resultBox = document.getElementById("result-box");
 const scoreSpan = document.getElementById("score");
 const scoreMsg = document.getElementById("score-message");
+document.querySelector(".quiz-container").insertBefore(timerDisplay, quizBox);
 
 function loadQuestion() {
   const q = questions[currentQuestion];

@@ -79,3 +79,9 @@ body {
   .share {
     margin-top: 1.5rem;
   }
+
+  #timer {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #ffd700;
+  }
