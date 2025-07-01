@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample ZeroToBuild Brief - See What You'll Get</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen relative">
+    <!-- Decorative Background Elements -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-float"></div>
+        <div class="absolute top-40 right-0 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-float" style="animation-delay: -2s;"></div>
+        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-pink-400 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-float" style="animation-delay: -4s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-sm border-b border-white/50 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <a href="index.html" class="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-200">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-16 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+                What a <span class="text-gradient">ZeroToBuild Brief</span> Looks Like
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                This isn't what the founder typed. It's the result of a conversation where ZeroToBuild helped them refine, challenge, and clarify their thinking until this brief emerged.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        
+        <!-- Step 1: Define the Idea -->
+        <section class="mb-16">
+            <div class="bg-white/90 rounded-3xl p-8 shadow-xl border border-white/50 backdrop-blur-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <span class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">1</span>
+                    🧠 Define the Idea
+                </h2>
+                
+                <div class="space-y-4">
+                    <p class="text-lg font-semibold text-gray-800">
+                        <strong>Prompt:</strong> "Describe your idea so another founder says 'hell yes.'"
+                    </p>
+                    
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-lg">
+                        <p class="text-gray-800 mb-3">
+                            I'm building an AI co-pilot for overwhelmed Etsy sellers who spend hours replying to DMs and planning content. It helps them draft customer replies and generate shop-based content ideas.
+                        </p>
+                        <p class="text-gray-800">
+                            The insight came from 3 shop owners who said: "I spend more time answering questions than creating."
+                        </p>
+                    </div>
+                    
+                    <!-- Maturity Check List -->
+                    <div class="mt-6">
+                        <p class="text-sm font-semibold text-gray-700 mb-3">Maturity Check:</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <span class="text-green-500 mr-3">✅</span>
+                                <span class="text-gray-700">Clear Target User</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-500 mr-3">✅</span>
+                                <span class="text-gray-700">Specific Pain Point</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-500 mr-3">✅</span>
+                                <span class="text-gray-700">Grounded in Real Insight</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 2: Define the MVP -->
+        <section class="mb-16">
+            <div class="bg-white/90 rounded-3xl p-8 shadow-xl border border-white/50 backdrop-blur-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <span class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">2</span>
+                    🎯 Define the MVP
+                </h2>
+                
+                <div class="space-y-4">
+                    <p class="text-lg font-semibold text-gray-800">
+                        <strong>Prompt:</strong> "What's the smallest version of your idea that still tests your core belief?"
+                    </p>
+                    
+                    <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-lg">
+                        <p class="text-gray-800">
+                            A landing page and demo that shows how the co-pilot drafts replies to common Etsy questions. I'll manually simulate responses with GPT and test whether sellers trust the AI-generated replies.
+                        </p>
+                    </div>
+                    
+                    <!-- Maturity Check List -->
+                    <div class="mt-6">
+                        <p class="text-sm font-semibold text-gray-700 mb-3">Maturity Check:</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <span class="text-green-500 mr-3">✅</span>
+                                <span class="text-gray-700">Focused Scope</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-500 mr-3">✅</span>
+                                <span class="text-gray-700">Tests the Core Risk</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-500 mr-3">✅</span>
+                                <span class="text-gray-700">Doesn't Overbuild</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 3: Suggested Validation Plan -->
+        <section class="mb-16">
+            <div class="bg-white/90 rounded-3xl p-8 shadow-xl border border-white/50 backdrop-blur-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <span class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">3</span>
+                    🧪 Suggested Validation Plan
+                </h2>
+                
+                <div class="space-y-4">
+                    <p class="text-lg font-semibold text-gray-800">
+                        <strong>Core risk:</strong> Will Etsy sellers trust AI to talk to their customers?
+                    </p>
+                    
+                    <p class="text-gray-600">ZeroToBuild might suggest:</p>
+                    
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-3 mt-1">✅</span>
+                            <span class="text-gray-700">Create a landing page showing example replies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-3 mt-1">✅</span>
+                            <span class="text-gray-700">Use GPT + Airtable to manually simulate the co-pilot</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-3 mt-1">✅</span>
+                            <span class="text-gray-700">DM 5 Etsy sellers with a demo link and track reactions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-3 mt-1">✅</span>
+                            <span class="text-gray-700">Use built-in templates for landing pages and outreach</span>
+                        </li>
+                    </ul>
+                    
+                    <p class="text-gray-600 mt-4">
+                        Want help building a landing page or messaging test? ZeroToBuild can generate those too.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4: Expert Feedback on Your Solution -->
+        <section class="mb-16">
+            <div class="bg-white/90 rounded-3xl p-8 shadow-xl border border-white/50 backdrop-blur-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <span class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">4</span>
+                    🧠 Expert Feedback on Your Solution
+                </h2>
+                
+                <div class="space-y-6">
+                    <p class="text-gray-600">
+                        After defining your idea and MVP, ZeroToBuild brings in AI-generated expert feedback—just like you'd get from a sharp product advisor or strategic cofounder.
+                    </p>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">🔍 Excerpt from AI Feedback:</h3>
+                        <blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-700 bg-gray-50 p-4 rounded-r-lg">
+                            "This MVP is a strong first test of trust, but the core risk is emotional, not technical. If Etsy sellers fear losing control, even a great AI response won't be enough. Your next step should include a trust-building UI pattern: draft-first, approve-before-send."
+                        </blockquote>
+                        <p class="text-sm text-gray-600 mt-2">
+                            Feedback continues with suggestions around onboarding, wedge positioning, and messaging clarity.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">💡 Sample Suggestions:</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-3 mt-1">✅</span>
+                                <span class="text-gray-700">Add a visual confirmation step before AI replies are sent</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-3 mt-1">✅</span>
+                                <span class="text-gray-700">Use a "human-approved" badge to build trust with buyers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-3 mt-1">✅</span>
+                                <span class="text-gray-700">Narrow early focus to Etsy shops with 100+ DMs/month for clearer pull signal</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm text-gray-500 mt-2">…and more, depending on your unique idea and MVP.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 5: Build Tools Preview -->
+        <section class="mb-16">
+            <div class="bg-white/90 rounded-3xl p-8 shadow-xl border border-white/50 backdrop-blur-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <span class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">5</span>
+                    🛠️ Build Tools Preview
+                </h2>
+                
+                <div class="space-y-4">
+                    <p class="text-gray-600">
+                        After validation, ZeroToBuild helps you build smarter—not just faster.
+                    </p>
+                    
+                    <p class="text-gray-600">Based on this MVP, you might get:</p>
+                    
+                    <ul class="space-y-4">
+                        <li>
+                            <strong class="text-gray-800">Recommended Stack:</strong> 
+                            <span class="text-gray-700">Airtable, Softr, Postmark</span>
+                        </li>
+                        <li>
+                            <strong class="text-gray-800">Key MVP Features:</strong> 
+                            <span class="text-gray-700">AI reply suggestions, shop preview, "Approve and send" flow</span>
+                        </li>
+                        <li>
+                            <strong class="text-gray-800">Suggested Data Model:</strong> 
+                            <span class="text-gray-700">Users, Messages, Templates, Feedback Logs</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="text-center">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 text-white">
+                <h2 class="text-2xl font-bold mb-4">🚀 Want a brief like this for your idea?</h2>
+                <p class="text-xl mb-6">Join the waitlist to try ZeroToBuild before launch and get <strong>30% off</strong> when we go live.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a 
+                        href="index.html" 
+                        class="bg-white/20 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/30 transition-colors duration-200">
+                        ← Back to Home
+                    </a>
+                    <a 
+                        href="index.html#form" 
+                        class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200">
+                        👉 Join the Waitlist
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-lg mb-4">Built by a solo founder for solo founders.</p>
+            <a 
+                href="#" 
+                class="inline-flex items-center text-gray-400 hover:text-white transition-colors duration-200"
+                title="GitHub Repository">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html> 
