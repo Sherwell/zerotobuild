@@ -1,4 +1,4 @@
-# MVP Compass Landing Page
+# ZeroToBuild Landing Page
 
 A simple, responsive landing page for MVP Compass - a product idea validation tool for solo founders and indie hackers.
 
